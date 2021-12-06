@@ -1,0 +1,151 @@
+* {
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    color:darkslategrey;
+  }
+
+/* STRUCTURAL */
+
+body {
+  background-color: lightcyan;
+  display: grid;
+  grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; /* there are eight equal columns */
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+}
+  header{
+    grid-column: 2/8;
+  }
+
+    nav {
+      border-style: dotted;
+      border-color: tomato;
+      background-color:blanchedalmond;
+      padding: 1em;
+    }
+
+  aside {
+    float: right;
+    width: min(50%, 25vw);
+    height: 50%;
+  }
+
+  article {
+    background-color: blanchedalmond;
+    padding: 1em;
+  }
+  
+  footer {
+    grid-column: 1/9;
+    text-align: center;
+    font-weight: lighter;
+  }
+
+/* ELEMENTS */
+
+  a {
+    color:tomato;
+  }
+
+  a:hover {
+    color: rgb(245, 157, 141);
+  }
+
+  img {
+    width: min(100%, 40vw);
+    height: 100%;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 0.25em;
+    }
+
+  p {
+    text-align: justify;
+    text-justify: auto;
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 10px;
+  }
+
+  video {
+    width: min(100%, 40vw);
+    height: 100%; 
+  }
+
+/* CLASSES */
+
+  .bullet {
+    list-style-type: square;
+    text-align:left;
+  }
+
+  .col-1 {
+    grid-column: 2/4;
+  }
+
+  .col-2 {
+    grid-column: 4/6;
+  }
+
+  .col-3 {
+    grid-column: 6/8;
+  }
+
+  .introduction {
+    background-color: lightcyan;
+  }
+
+  .main {
+    grid-column: 2/8;
+  }
+
+  .return{
+    grid-column: 1/9;
+    text-align: center;
+  }
+
+  /* MEDIA QUERIES */
+
+  /* print */
+  @media print {
+    *{
+      color: black;
+      background-color: white;
+    }
+    
+    figure, footer, img, nav, video {
+      display: none;
+    }
+  }
+
+  /* mobile phones and small tablets, as well as small desktop windows */
+  @media only screen and (max-width: 768px) { 
+    [class*="col-"] {
+      grid-column: 2/8;
+    }
+
+    table { 
+      display: inline;
+    }
+
+    aside {
+      float:none;
+      display: inline;
+      align-items: center;
+    }
+  }
+
+  /* portrait-orientated tablets */
+  @media only screen and 
+  (min-device-width: 769px) and
+  (max-device-width: 1024px) and 
+  (orientation: portrait) {
+    [class*="col-"] {
+      grid-column: 2/8;
+    }
+  }
