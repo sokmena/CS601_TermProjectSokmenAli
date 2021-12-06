@@ -7,7 +7,7 @@ To run the program simply open index.html with a browser of your choice.
 ## Week 1 extra features
 - Used html features such as block lines
 - Have multiple column-spanning table data
-- Placed bulletpoints within tables
+- Placed bullet points within tables
 - Used links to jump to specific parts of the page
 - Used html code for forward slash: "AC/DC"
 
