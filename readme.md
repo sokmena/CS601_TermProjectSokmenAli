@@ -20,3 +20,6 @@ To run the program simply open index.html with a browser of your choice.
 - Used media queries to adjust grid design in mobile devices
 - Bug fixes:
   - Fixed the issue with uppercase file extension leading to the video not loading
+
+## Final features
+- Used Vue v-html to replace th static navbar with an attribute-bound navbar that allows expansion of the website
