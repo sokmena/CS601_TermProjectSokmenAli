@@ -8,10 +8,10 @@
     <script src="https://unpkg.com/vue@next"></script>
     <title>Ali Sokmen</title>
 </head>
-<body>
+<body id="app">
     <header class="main">
         <h1>Ali Sokmen's Personal Homepage</h1>
-        <nav id="app">
+        <nav>
             <span v-html="HTMLcontent">{{HTMLcontent}}</span>
         </nav>
     </header>
@@ -30,9 +30,9 @@
     </section>
     <footer>
         <hr>
-        Ali Sokmen - 2021
+        {{footer}}
     </footer>
-    <script src="vue.js"></script>
+    <script src="script/vue.js"></script>
     <script>
         app.mount('#app');
     </script>

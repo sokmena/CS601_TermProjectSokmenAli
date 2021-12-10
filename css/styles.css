@@ -149,3 +149,9 @@ body {
       grid-column: 2/8;
     }
   }
+
+/* UNIQUE ELEMENTS */
+#news{
+  width: max(10%, 15vw);
+  height: 10%;
+}

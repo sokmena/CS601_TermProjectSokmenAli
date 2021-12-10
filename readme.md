@@ -22,4 +22,4 @@ To run the program simply open index.html with a browser of your choice.
   - Fixed the issue with uppercase file extension leading to the video not loading
 
 ## Final features
-- Used Vue v-html to replace th static navbar with an attribute-bound navbar that allows expansion of the website
+- Used Vue (v-html) to replace the static navbar and footer with an attribute-bound ones that allow easier expansion of the website

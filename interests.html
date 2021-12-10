@@ -8,11 +8,11 @@
     <script src="https://unpkg.com/vue@next"></script>
     <title>Ali Sokmen</title>
 </head>
-<body>
+<body id="app">
     <header class="main">
         <a id="top"></a>
         <h1>About My Interests</h1>
-        <nav id="app">
+        <nav>
             <span v-html="HTMLcontent">{{HTMLcontent}}</span>
         </nav>
     </header>
@@ -82,9 +82,9 @@
     </div>
     <footer>
         <hr>
-        Ali Sokmen - 2021
+        {{footer}}
     </footer>
-    <script src="vue.js"></script>
+    <script src="script/vue.js"></script>
     <script>
         app.mount('#app');
     </script>
