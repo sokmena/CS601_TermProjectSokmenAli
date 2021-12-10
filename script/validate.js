@@ -5,39 +5,29 @@ function validateForm(){
   let errors = document.getElementById("errors");
   let formatErr = document.getElementById("formatErr");
   let extensionErr = document.getElementById("extensionErr");
-
+  let success = document.getElementById("success");
 
   // making sure that error notes are reset when the user presses submit again
   errors.style.display = "none";
   formatErr.style.display = "none";
   extensionErr.style.display = "none";
 
-
   // getting DOM element
   let email = document.forms["subscribe"]["email"].value;
 
-  // first we check if the user entered blanks, we use an alert here
+  /* first we check if the user entered blanks, we use an alert here. 
+  HTML5 checks this in browser but we still check in case of older browsers */
   if (email === "") {
     console.log("User entered empty fields");
     alert("Please do not leave the field blank.");
     return false;
   }
 
-/*
-  // below conditionals perform the validation of fields using the functions
-  if (checkLength(email) === false) {
-    console.log("Email address too short");
-    errors.style.display = "inline-block";
-    formatErr.style.display = "inline-block";
-  } else {
-    to_submit--;
-  }
-*/
-
+  // perform validation
   if (checkRegex(email) === false) {
     console.log("Email format wrong");
     errors.style.display = "inline-block";
-    formatErr.style.display = "inline-block";
+    formatErr.style.display = "block";
   } else {
     to_submit--;
   }
@@ -45,7 +35,7 @@ function validateForm(){
   if (checkExtension(email) === false) {
     console.log("Email extension wrong");
     errors.style.display = "inline-block";
-    extensionErr.style.display = "inline-block";
+    extensionErr.style.display = "block";
   } else {
     to_submit--;
   }
@@ -54,6 +44,7 @@ function validateForm(){
   // finally we check if all three conditions have been met
   if (to_submit === 0){
     console.log("Form submit successful");
+    success.style.display = "inline-block";
     return true;
   } else {
     console.log("Form submit failed");
@@ -74,19 +65,11 @@ function checkExtension(name){
     let endings = [".com",".net",".org",".edu"];
     let status = false;
 
-    for (ending in endings) {
+    for (ending of endings) {
         if (name.endsWith(ending)){
             status = true;
+            return status;
         }
     }
     return status;
 }
-
-/*
-// function to check name length
-function checkLength(name){
-  if (name.length < 2){
-    return false;
-  }
-}
-*/
