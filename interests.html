@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/vue@next"></script>
     <title>Ali Sokmen</title>
 </head>
 <body>
     <header class="main">
         <a id="top"></a>
         <h1>About My Interests</h1>
-        <nav>
-            <a href=./index.html>Home</a> | <a href=./cv.html>Curriculum Vitae</a> | Interests | <a href=./contact.html>Contact</a>
+        <nav id="app">
+            <span v-html="HTMLcontent">{{HTMLcontent}}</span>
         </nav>
     </header>
     <!-- Commented out for potential use in term project
@@ -83,5 +84,9 @@
         <hr>
         Ali Sokmen - 2021
     </footer>
+    <script src="vue.js"></script>
+    <script>
+        app.mount('#app');
+    </script>
 </body>
 </html>
