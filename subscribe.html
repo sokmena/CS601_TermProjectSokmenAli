@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Ali Sokmen</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <script src="script/validate.js"></script>
 </head>
 <body id="app">
     <header class="main">
@@ -22,6 +23,23 @@
         </figure>
         <article>
             <p>Subscribe by filling in your e-mail address below to get news and updates about me and my work. I promise I will not share your e-mail address with anyone but mail-order scammers and keep the daily e-mails to less than twenty.</p>
+            <form name="subscribe" action="https://api.mailslurp.com/forms" method="post" onsubmit="return validateForm()">
+                <h4>Please enter your e-mail address and click the subscribe button</h4>
+                <label for="email">E-mail: </label>
+                <input type="hidden" name="_to" value="sokmena@bu.edu" />
+                <input type="text" id="email" name="email" maxlength="64" required>
+                <input id="button" type="submit" value="Submit">
+              </form>
+              <section id="errors">
+                <h4>Could not submit the form due to following reasons:</h4>
+                <ul>
+                    <li class="errList" id="formatErr">Incorrect format</li>
+                    <li class="errList" id="extensionErr">Incorrect extension</li>
+                </ul>
+            </section>
+            <section id="success">
+                E-mail address submitted successfully!
+            </section>
         </article>
     </section>
     <aside>
