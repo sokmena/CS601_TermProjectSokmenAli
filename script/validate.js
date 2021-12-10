@@ -9,6 +9,7 @@ function validateForm(){
 
   // making sure that error notes are reset when the user presses submit again
   errors.style.display = "none";
+  success.style.display = "none";
   formatErr.style.display = "none";
   extensionErr.style.display = "none";
 
@@ -23,7 +24,7 @@ function validateForm(){
     return false;
   }
 
-  // perform validation
+  // perform validations
   if (checkRegex(email) === false) {
     console.log("Email format wrong");
     errors.style.display = "inline-block";
