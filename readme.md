@@ -24,3 +24,4 @@ To run the program simply open index.html with a browser of your choice.
 ## Final features
 - Used Vue (v-html) to replace the static navbar and footer with an attribute-bound ones that allow easier expansion of the website
 - Used form validation for the e-mail subscription form, using the ES6 feature 'endsWith' for checking mail address extensions
+- Used vue to display images in modal mode
