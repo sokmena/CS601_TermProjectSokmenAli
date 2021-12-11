@@ -46,7 +46,7 @@
             </figure>
         </article>
         <div class="modal" v-if="displayModal">
-            <img class="enlarged" :src="image1" :alt="alt1" @click="displayModal = false"/>
+            <img class="enlarged" :src="image1" @click="displayModal = false"/>
           </div>
     </section>
     <div class="backshade" v-if="displayModal" @click="displayModal = false"></div>
