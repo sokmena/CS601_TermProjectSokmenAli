@@ -21,7 +21,22 @@ const app = Vue.createApp({
             capt5: "Devon, 2019",
             image6: "images/gallery/rainbow.JPG",
             alt6: "Rainbow over overcast sky",
-            capt6: "London, 2019"
+            capt6: "London, 2019",
+            image: null
         }
+    },mounted (){
+        // event listener for resizing window too small
+        window.addEventListener('resize', this.checkEnlarge);
     },
+    methods: {
+        setImage(image){
+            this.image = image;
+        },
+        // terminates Modal if window is too small
+        checkEnlarge(){
+            if (window.innerWidth < 768) {
+                this.displayModal = false;
+            }
+        }
+    }
 });

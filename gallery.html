@@ -10,44 +10,44 @@
 </head>
 <body id="app">
     <header class="main">
-        <h1>Image Gallery</h1>
+        <h1>Photo Gallery</h1>
         <nav id="nav">
             <span v-html="HTMLcontent">{{HTMLcontent}}</span>
         </nav>
     </header>
     <section class="main">
-        <h2>Click on an image to enlarge</h2>
+        <h2 id="clickEnlarge">Click on an image to enlarge</h2>
         <article>
             <figure class="gallery" >
-                <img :src="image1" :alt="alt1" @click="displayModal = true"/>
+                <img :src="image1" :alt="alt1" @click="displayModal = true; setImage(image1)"/>
                 <figcaption class="caption">{{capt1}}</figcaption> 
             </figure>
             <figure class="gallery" >
-                <img :src="image2" :alt="alt2" @click="displayModal = true"/>
+                <img :src="image2" :alt="alt2" @click="displayModal = true; setImage(image2)"/>
                 <figcaption class="caption">{{capt2}}</figcaption> 
             </figure>
             <br>
             <figure class="gallery" >
-                <img :src="image3" :alt="alt3" @click="displayModal = true"/>
+                <img :src="image3" :alt="alt3" @click="displayModal = true; setImage(image3)"/>
                 <figcaption class="caption">{{capt3}}</figcaption> 
             </figure>
             <figure class="gallery" >
-                <img :src="image4" :alt="alt4" @click="displayModal = true"/>
+                <img :src="image4" :alt="alt4" @click="displayModal = true; setImage(image4)"/>
                 <figcaption class="caption">{{capt4}}</figcaption> 
             </figure>
             <br>
             <figure class="gallery" >
-                <img :src="image5" :alt="alt5" @click="displayModal = true"/>
+                <img :src="image5" :alt="alt5" @click="displayModal = true; setImage(image5)"/>
                 <figcaption class="caption">{{capt5}}</figcaption> 
             </figure>
             <figure class="gallery" >
-                <img :src="image6" :alt="alt6" @click="displayModal = true"/>
+                <img :src="image6" :alt="alt6" @click="displayModal = true; setImage(image6)"/>
                 <figcaption class="caption">{{capt6}}</figcaption> 
             </figure>
         </article>
         <div class="modal" v-if="displayModal">
-            <img class="enlarged" :src="image1" @click="displayModal = false"/>
-          </div>
+            <img class="enlarged" :src="image" alt:="Enlarged selection" @click="displayModal = false"/>
+        </div>
     </section>
     <div class="backshade" v-if="displayModal" @click="displayModal = false"></div>
     <footer>
