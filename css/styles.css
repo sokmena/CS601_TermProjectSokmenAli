@@ -79,6 +79,16 @@ body {
 
 /* CLASSES */
 
+  .backshade{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 10;
+  }
+
   .bullet {
     list-style-type: square;
     text-align:left;
@@ -106,6 +116,14 @@ body {
 
   .main {
     grid-column: 2/8;
+  }
+
+  .modal {
+    display:center;
+    position: absolute;
+    top: 25%;
+    margin: auto;
+    z-index: 99;
   }
 
   .return{
