@@ -144,6 +144,10 @@ body {
     z-index: 99;
   }
 
+  .pHeader {
+    text-align: left;
+  }
+
   .return{
     grid-column: 1/9;
     text-align: center;

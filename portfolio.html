@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Ali Sokmen</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body id="app">
+    <header class="main">
+        <a id="top"></a>
+        <h1>Portfolio</h1>
+        <nav id="nav">
+            <span v-html="HTMLcontent">{{HTMLcontent}}</span>
+        </nav>
+    </header>
+    <section class="main">
+        <h2>A sample of my recent work</h2>
+        <article>
+            <h3 class="pHeader">Student Data Entry Form</h3>
+            <p>Details here</p>
+        </article>
+        <article>
+            <h3 class="pHeader">My Academic Profile</h3>
+            <p>Details here</p>
+        </article>
+        <article>
+            <h3 class="pHeader">Air Quality Analysis</h3>
+            <p>Details here</p>
+        </article>
+    </section>
+    <div class="return">
+        <p></p>
+        <a href="#top">Return to Top</a>
+    </div>
+    <footer>
+        <hr>
+        {{footer}}
+    </footer>
+    <script src="script/vue.js"></script>
+    <script>
+        app.mount('#app');
+    </script>
+</body>
+</html>
