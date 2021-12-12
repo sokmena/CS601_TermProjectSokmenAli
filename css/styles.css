@@ -186,11 +186,19 @@ body {
       display: none;
     }
 
+    [class*="galBreak"] {
+      display: none;
+    }
+
     #clickEnlarge {
       display: none;
     }
 
-    br {
+    #waMobile {
+      display: inline-block !important;
+    }
+
+    #waPC {
       display: none;
     }
 
@@ -216,6 +224,11 @@ body {
   }
 
 /* UNIQUE ELEMENTS */
+#contactMeme {
+  width: min(100%, 35vw);
+  height: 100%;
+}
+
 #news{
   width: max(10%, 15vw);
   height: 10%;
@@ -250,5 +263,27 @@ body {
 
 #formatErr{
   display:none;
+}
+
+#waMobile {
+  display:none;
+}
+
+#waPC {
+  text-decoration: underline;
+}
+
+#modalWA {
+  display:center;
+  position: fixed;
+  top: 0%;
+  left: 43vw;
+  margin: auto;
+  z-index: 99;
+}
+
+#waImg{
+  height: 100vh;
+  width: auto;
 }
 

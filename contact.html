@@ -17,7 +17,7 @@
     </header>
     <section class="main">
         <figure>
-            <img src="images/contact.jpeg" alt="Contact information meme"/>
+            <img id="contactMeme" src="images/contact.jpeg" width="576" height="576" alt="Contact information meme"/>
         </figure>
         <article>
             <p>My preferred contact channel is email. I normally respond to emails within a day. However, Whatsapp messages are also fine if you cannot wait!</p>
@@ -26,15 +26,19 @@
                     <a href="mailto:sokmena@bu.edu">Email</a>
                 </li>
                 <li>
-                    <a href="images/wa.jpeg">Whatsapp</a>
+                    <a id="waPC" @click="displayModal = true">Whatsapp</a>
+                    <a id="waMobile" href="images/wa.jpeg">Whatsapp</a>
                 </li>
                 <li>
                     Discord: skmna#9167
                 </li>
             </ul>
-
         </article>
+        <div id="modalWA" v-if="displayModal" @click="displayModal = false">
+            <img id="waImg" :src="wa" alt:="WhatsApp contact square code"/>
+        </div>
     </section>
+    <div class="backshade" v-if="displayModal" @click="displayModal = false"></div>
     <footer>
         <hr>
         {{footer}}

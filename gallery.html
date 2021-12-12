@@ -10,6 +10,7 @@
 </head>
 <body id="app">
     <header class="main">
+        <a id="top"></a>
         <h1>Photo Gallery</h1>
         <nav id="nav">
             <span v-html="HTMLcontent">{{HTMLcontent}}</span>
@@ -26,7 +27,7 @@
                 <img :src="image2" :alt="alt2" @click="displayModal = true; setImage(image2)"/>
                 <figcaption class="caption">{{capt2}}</figcaption> 
             </figure>
-            <br>
+            <br class="galBreak">
             <figure class="gallery" >
                 <img :src="image3" :alt="alt3" @click="displayModal = true; setImage(image3)"/>
                 <figcaption class="caption">{{capt3}}</figcaption> 
@@ -35,7 +36,7 @@
                 <img :src="image4" :alt="alt4" @click="displayModal = true; setImage(image4)"/>
                 <figcaption class="caption">{{capt4}}</figcaption> 
             </figure>
-            <br>
+            <br class="galBreak">
             <figure class="gallery" >
                 <img :src="image5" :alt="alt5" @click="displayModal = true; setImage(image5)"/>
                 <figcaption class="caption">{{capt5}}</figcaption> 
@@ -45,11 +46,15 @@
                 <figcaption class="caption">{{capt6}}</figcaption> 
             </figure>
         </article>
-        <div class="modal" v-if="displayModal">
-            <img class="enlarged" :src="image" alt:="Enlarged selection" @click="displayModal = false"/>
+        <div class="modal" v-if="displayModal" @click="displayModal = false">
+            <img class="enlarged" :src="image" alt:="Enlarged selection"/>
         </div>
     </section>
     <div class="backshade" v-if="displayModal" @click="displayModal = false"></div>
+    <div class="return">
+        <p></p>
+        <a href="#top">Return to Top</a>
+    </div>
     <footer>
         <hr>
         {{footer}}

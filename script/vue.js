@@ -22,6 +22,7 @@ const app = Vue.createApp({
             image6: "images/gallery/rainbow.JPG",
             alt6: "Rainbow over overcast sky",
             capt6: "London, 2019",
+            wa: "images/wa.jpeg",
             image: null
         }
     },mounted (){
