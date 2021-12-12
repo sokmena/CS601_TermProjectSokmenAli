@@ -89,6 +89,11 @@ body {
     z-index: 10;
   }
 
+  .box {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
   .bullet {
     list-style-type: square;
     text-align:left;
@@ -121,6 +126,33 @@ body {
     text-align: left;
   }
 
+  .flex1{
+    flex-basis: 12.5%;
+    flex-grow: 1.5;
+    text-align: left;
+  }
+
+  .flex2{
+    flex-basis: max(20%, 200px);
+    flex-grow: 3;
+    padding: 2%;
+  }
+
+  .flex3{
+    flex-basis: 12.5%;
+    flex-grow: 1;
+    align-self: center;
+  }
+
+  .flexLink {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
   .gallery{
     width: min(100%, 25vw);
     height: 100%;
@@ -142,10 +174,6 @@ body {
     left: 0%;
     margin: auto;
     z-index: 99;
-  }
-
-  .pHeader {
-    text-align: left;
   }
 
   .return{
