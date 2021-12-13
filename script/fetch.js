@@ -1,14 +1,13 @@
-const displayTable = document.getElementById("results"); // Get the table
+
 
 document.addEventListener('DOMContentLoaded', function(){
-    fetch('https://substantial-foam-piano.glitch.me/degrees.json')
+    fetch('https://raw.githubusercontent.com/sokmena/CS601_TermProjectSokmenAli/master/degrees.json')
       .then(response => response.json())
       .then(data => {
+      const displayTable = document.getElementById("results"); // Get the table
+      
       let len = data.Degrees.length;
       let wid = Object.keys(data.Degrees[0]).length;
-      
-      // clearing contents of to make sure we do not write multiple tables
-      displayTable.innerHTML = "";
       
       // creating a table
       let myTable = document.createElement('table');
@@ -35,14 +34,13 @@ document.addEventListener('DOMContentLoaded', function(){
           tr.appendChild(td);
         }
       }
-      displayTable.appendChild(myTable);
+    displayTable.appendChild(myTable);
     })
     .catch((error) => {
       // catching and handling errors
       console.error('Error:', error); 
-      displayTable.innerHTML = "Could not load the data, please try again later.";
+      // do not display education section if data is not three
+      let education = document.getElementById("Education");
+      education.style.display = "none";
     });
 });
-
-
-
