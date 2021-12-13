@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function(){
     fetch('https://raw.githubusercontent.com/sokmena/CS601_TermProjectSokmenAli/master/degrees.json')
       .then(response => response.json())
