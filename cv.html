@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/vue@next"></script>
+    <script src="scripts/fetch.js"></script>
     <title>Ali Sokmen - CV</title>
 </head>
 <body id="app">
@@ -82,31 +83,7 @@
     <section class="main">
         <article>
             <h2>Education</h2>
-            <table>
-                <tr>
-                    <th scope="col">Degree</th>
-                    <th scope="col">Institution</th>
-                    <th scope="col">Graduation Date</th>
-                    <th scope="col">Grade</th>
-                </tr>
-                <tr>
-                    <td>MS in Software Development</td>
-                    <td>Boston University</td>
-                    <td>May 2022 (Expected)</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>MPP in Public Policy</td>
-                    <td>Hertie School of Governance</td>
-                    <td>June 2011</td>
-                    <td>84/100</td>
-                </tr>
-                <tr>
-                    <td>BA in Philosophy, Politics and Economics</td>
-                    <td>Universtiy of Pennsylvania</td>
-                    <td>December 2008</td>
-                    <td>3.3/4.0</td>
-                </tr>
+            <table id="results">
             </table>
         </article>
     </section>

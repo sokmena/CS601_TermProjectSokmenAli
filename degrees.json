@@ -1,0 +1,22 @@
+{
+  "Degrees": [
+    {
+      "School": "University of Pennsylvania",
+      "Major": "PPE",
+      "Type": "BA",
+      "Year": 2008
+    },
+    {
+      "School": "Hertie School of Governance",
+      "Major": "Public Policy",
+      "Type": "MPP",
+      "Year": 2011
+    },
+    {
+      "School": "Boston University",
+      "Major": "Software Development",
+      "Type": "MS",
+      "Year": 2022
+    }
+  ]
+}
